@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/*:root {*/
+/*  --foreground-rgb: 0, 0, 0;*/
+/*  --background-start-rgb: 214, 219, 220;*/
+/*  --background-end-rgb: 255, 255, 255;*/
+/*}*/
+
+p {
+  line-height: 1.5rem;
+}
+
+.center-line {
+  @apply w-1 h-full bg-black fixed left-1/2 top-0;
 }
 
 @media (prefers-color-scheme: dark) {
