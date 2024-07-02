@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-p {
-  /*line-height: 1.5rem;*/
-  @apply lg:text-lg md:text-base;
-}
-
 h1 {
   @apply lg:text-5xl md:text-4xl;
 }

@@ -15,7 +15,7 @@ const config: Config = {
         },
       },
       animation: {
-        "infinite-scroll": "infinite-scroll 10s linear infinite"
+        "infinite-scroll": "infinite-scroll 50s linear infinite"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

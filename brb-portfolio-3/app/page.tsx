@@ -1,14 +1,28 @@
 import Container from "@/components/ui/Container";
 import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
+import TechStack from "@/components/TechStack";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
       <main>
           <Container>
               <Hero />
-              <Experience />
+              {/*<TechStack />*/}
           </Container>
+          <section className='bg-black text-white'>
+            <Container>
+                <TechStack />
+                <Experience />
+                {/*<Contact />*/}
+            </Container>
+          </section>
+          <Container>
+              <Contact />
+          </Container>
+
+
           {/*<Container>*/}
           {/*    <div className='px-2'>*/}
           {/*        <Hero />*/}
