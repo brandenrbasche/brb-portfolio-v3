@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
-// import { Libre_Baskerville } from "next/font/google";
-import { libreBaskerville} from "@/data/fonts";
+import { ibmPlexMono } from "@/data/fonts";
 import "./globals.css";
 
-// const libreBaskerville = Libre_Baskerville({
-//   subsets: ['latin'],
-//   weight: ['400', '700']
-// });
 
 export const metadata: Metadata = {
   title: "Branden Basche Portfolio",
@@ -20,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={libreBaskerville.className}>{children}</body>
+      <body className={ibmPlexMono.className}>{children}</body>
     </html>
   );
 }

@@ -10,15 +10,15 @@ type Props = {
 
 const FloatingText = ({ text }: Props) => {
     return (
-        <div id='infinite-text flex'>
-            <h1 className='transform -translate-x-1/2 w-screen text-7xl flex justify-center mt-10 animate-infinite-scroll whitespace-nowrap gap-x-6'>
-                <span className='font-black'>{'Full-Stack Engineer'}</span>
-                <span className={twMerge(ibmPlexMono.className, 'uppercase')}>{'UI-Obsessed'}</span>
-                <span>{'Locally infamous' + ' '}</span>
-                <span className={twMerge(dmSans.className, 'uppercase')}>{'Hyper Self-reflective'}</span>
-                <span className={twMerge(ibmPlexMono.className, 'uppercase')}>{'Mysterious'}</span>
+        <div>
+            <h1 className='font-black fixed transform -translate-x-1/2 w-screen text-4xl flex justify-center mt-10 whitespace-nowrap gap-x-6'>
+                {text}
+                {/*<span className='font-black'>{'Full-Stack Engineer'}</span>*/}
+                {/*<span className={twMerge(ibmPlexMono.className, 'uppercase')}>{'UI-Obsessed'}</span>*/}
+                {/*<span>{'Locally infamous' + ' '}</span>*/}
+                {/*<span className={twMerge(dmSans.className, 'uppercase')}>{'Hyper Self-reflective'}</span>*/}
+                {/*<span className={twMerge(ibmPlexMono.className, 'uppercase')}>{'Mysterious'}</span>*/}
             </h1>
-            {/*<h1 className={twMerge(inconsolata.className, 'transform uppercase -translate-x-1/2 w-screen text-7xl flex justify-center mt-10 animate-infinite-scroll whitespace-nowrap')}>{text}</h1>*/}
         </div>
     );
 };
