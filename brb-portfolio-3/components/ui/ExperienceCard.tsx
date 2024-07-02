@@ -8,7 +8,7 @@ type Props = {
 
 const ExperienceCard = ({ company, jobTitle, jobDescription }: Props) => {
     return (
-        <div className='w-full h-80 border-white border rounded-lg flex justify-between mb-6'>
+        <div className='w-full h-[25rem] border-white border rounded-lg flex justify-between mb-6'>
             <div className='w-3/4 border-r border-white p-2 flex flex-col justify-between'>
                 <div className='flex justify-between'>
                     <h3 className='font-bold uppercase'>{company}</h3>

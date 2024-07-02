@@ -11,7 +11,7 @@ const Hero = () => {
             </div>
             <div className='mb-16 text-5xl w-[85vw]'>
                 <p className='text-4xl font-bold mb-8'>Hi, I'm Branden.</p>
-                <p className='text-3xl'>I bring full-stack development, end-to-end testing, and UX/UI experience to the table to craft beautiful, user-friendly, and accessible web experiences.</p>
+                <p className='text-3xl'>I bring full-stack development, end-to-end testing, and UX/UI expertise to the table to craft beautiful, user-friendly, and accessible web experiences.</p>
             </div>
         </section>
         // <>
