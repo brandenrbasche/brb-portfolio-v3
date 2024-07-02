@@ -10,9 +10,11 @@ const TechStack = () => {
             <div>
                 {/*front end tools*/}
                 <p>TECH STACK</p>
-                <HorizontalText words={frontEndTools} animationSpeed={''}/>
-                {/*back end tools*/}
-                <HorizontalText words={backEndTools} animationSpeed={''}/>
+                <div>
+                    <HorizontalText words={frontEndTools} animationSpeed={''}/>
+                    {/*back end tools*/}
+                    <HorizontalText words={backEndTools} animationSpeed={''}/>
+                </div>
             </div>
         </section>
     );
