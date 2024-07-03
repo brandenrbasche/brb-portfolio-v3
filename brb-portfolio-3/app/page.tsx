@@ -3,19 +3,19 @@ import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
 import TechStack from "@/components/TechStack";
 import Contact from "@/components/Contact";
+import Trippy from "@/components/ui/Trippy";
 
 export default function Home() {
   return (
       <main>
           <Container>
               <Hero />
-              {/*<TechStack />*/}
           </Container>
+          {/*<Trippy />*/}
           <section className='bg-black text-white'>
             <Container>
                 <TechStack />
                 <Experience />
-                {/*<Contact />*/}
             </Container>
           </section>
           <Container>
