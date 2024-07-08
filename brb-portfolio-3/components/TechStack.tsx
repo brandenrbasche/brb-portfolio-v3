@@ -11,9 +11,9 @@ const TechStack = () => {
                 {/*front end tools*/}
                 <p>TECH STACK</p>
                 <div>
-                    <HorizontalText words={frontEndTools} animationSpeed={''}/>
+                    <HorizontalText words={frontEndTools} />
                     {/*back end tools*/}
-                    <HorizontalText words={backEndTools} animationSpeed={''}/>
+                    <HorizontalText words={backEndTools} />
                 </div>
             </div>
         </section>
