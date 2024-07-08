@@ -12,8 +12,8 @@ type Props = {
 
 const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, skills }: Props) => {
     return (
-        <>
-            <div className='w-full h-[65vh] flex flex-col space-y-3'>
+        <div>
+            <div className='w-full md:min-h-[65vh] sm:min-h-screen  flex flex-col space-y-3'>
                 {/* COMPANY NAME & DATE */}
                 <div className='flex items-center justify-between'>
                     <Reveal><h1 className='text-3xl font-bold'>{company}</h1></Reveal>
@@ -31,7 +31,7 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
                 {/* TODO: skills tags */}
                 {skills && (
                     <Reveal>
-                        <div className='mt-4'>
+                        <div className='my-4'>
                             <ul className='flex flex-wrap content-start justify-start text-nowrap'>
                                 {skills.map((skill, i) => (
                                     <li
@@ -46,7 +46,7 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
                     </Reveal>
                 )}
             </div>
-        </>
+        </div>
     );
 };
 

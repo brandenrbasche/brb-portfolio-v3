@@ -26,7 +26,7 @@ const Reveal = ({ children, width = 'fit-content', revealColor = 'black', delay 
     }, [isInView]);
 
     return (
-        <div ref={ref} style={{position: 'relative', width, height: "auto", overflow: 'hidden', paddingBottom: 5}}>
+        <div ref={ref} style={{position: 'relative', width, overflow: 'hidden', paddingBottom: 5}}>
             <motion.div
                 variants={{
                     hidden: {opacity: 0},
