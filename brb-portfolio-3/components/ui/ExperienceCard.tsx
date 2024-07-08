@@ -32,10 +32,10 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
                 {skills && (
                     <Reveal>
                         <div className='mt-4'>
-                            <ul className='space-x-4 inline-flex items-start justify-start text-nowrap'>
+                            <ul className='flex flex-wrap content-start justify-start text-nowrap'>
                                 {skills.map((skill, i) => (
                                     <li
-                                        className='bg-white/25 rounded-full px-3 py-1'
+                                        className='bg-white/25 rounded-full px-3 py-1 my-2 mr-3'
                                         key={i}
                                     >
                                         <p>{skill}</p>
