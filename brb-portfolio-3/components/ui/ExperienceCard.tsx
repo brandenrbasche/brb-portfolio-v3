@@ -29,17 +29,22 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
                     <Reveal><p>{jobDescription}</p></Reveal>
                 </div>
                 {/* TODO: skills tags */}
-                <Reveal>
-                    <div className='flex space-x-4 mt-4'>
-                        {skills && (
-                            skills.map((skill, i) => (
-                                <div className='bg-white/25 px-3 py-1 rounded-full' key={i}>
-                                    <p className='text-white'>{skill}</p>
-                                </div>
-                            ))
-                        )}
-                    </div>
-                </Reveal>
+                {skills && (
+                    <Reveal>
+                        <div className='mt-4'>
+                            <ul className='space-x-4 inline-flex items-start justify-start text-nowrap'>
+                                {skills.map((skill, i) => (
+                                    <li
+                                        className='bg-white/25 rounded-full px-3 py-1'
+                                        key={i}
+                                    >
+                                        <p>{skill}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </Reveal>
+                )}
             </div>
         </>
     );
