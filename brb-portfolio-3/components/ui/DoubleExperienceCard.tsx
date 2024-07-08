@@ -9,18 +9,20 @@ import React from 'react';
 const ExperienceCard = () => {
     return (
         <div className='w-full h-[25rem] border-white border rounded-lg flex justify-between mb-6'>
-            <div className='w-3/4 border-r border-white p-2 flex flex-col  justify-between'>
-                <div className='flex items-center justify-between'>
+            <div className='w-3/4 border-r border-white p-2 flex flex-col justify-between'>
+                <div className='flex items-center justify-between mb-2'>
                     <h3 className='font-bold uppercase'>General Motors</h3>
                 </div>
-                <div className='flex justify-between h-full'>
-                    {/*LEFT*/}
-                    <div className='border-r border-white/25 w-1/2 py-2 pr-2 flex flex-col justify-between text-white/75 transition ease-in-out hover:text-white'>
+                <div className='flex flex-col justify-between h-full'>
+
+                    <div className='h-full py-2 flex flex-col justify-between text-white/75 transition ease-in-out hover:text-white'>
                         <h3 className='font-base uppercase'>Full-Stack Software Engineer</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
-                    {/*RIGHT*/}
-                    <div className='w-1/2 p-2 flex flex-col justify-between text-white/75 transition ease-in-out hover:text-white'>
+
+                    <hr className='text-white/50 overflow-visible' />
+
+                    <div className='h-full py-2 flex flex-col justify-between text-white/75 transition ease-in-out hover:text-white'>
                         <h3 className='font-base uppercase'>Lead Quality Engineer</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco

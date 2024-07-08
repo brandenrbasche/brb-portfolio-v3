@@ -8,7 +8,7 @@ type Props = {
 
 const BigButton = ({ text, link }: Props) => {
     return (
-        <div className='relative flex items-center justify-center pb-6'>
+        <div className='w-screen relative flex items-center justify-center pb-6'>
             <Link
                 href={link}
                 className='w-3/4 rounded-full bg-black text-white flex items-center justify-center p-3 transition hover:bg-white hover:border-[3px] hover:text-black'>

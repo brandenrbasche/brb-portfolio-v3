@@ -1,17 +1,20 @@
 import React from 'react';
 import BigButton from "@/components/ui/BigButton";
+import {ScreenFitText} from "@/components/ui/ScreenFitText";
 
 const Contact = () => {
     return (
-        <section className='h-[50vh]'>
-            <div className='flex flex-col justify-between h-full'>
-                <p className='uppercase'>Reach Out</p>
-                <BigButton text={'Say hi'} link={'mailto:brandenbasche@gmail.com'} />
-            </div>
-            {/*<div>*/}
-            {/*    <BigButton text={'Say hi'} link={'mailto:brandenbasche@gmail.com'} />*/}
+        <>
+            {/*<div className='w-screen top-0'>*/}
+            {/*    <ScreenFitText text={'Reach out'} />*/}
             {/*</div>*/}
-        </section>
+            <section className='h-[50vh]'>
+                <h1>Reach out</h1>
+                {/*<div className='absolute flex flex-col justify-between h-full w-screen'>*/}
+                {/*    <BigButton text={'Say hi'} link={'mailto:brandenbasche@gmail.com'} />*/}
+                {/*</div>*/}
+            </section>
+        </>
     );
 };
 

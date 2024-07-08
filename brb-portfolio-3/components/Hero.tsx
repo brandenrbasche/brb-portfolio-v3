@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
     return (
-        <section className='h-screen flex flex-col justify-between'>
+        <section className='h-[80vh] flex flex-col justify-between'>
             <div className='flex justify-between'>
                 <h3 className='uppercase'>Branden<br/>Basche</h3>
                 <p>Brooklyn,<br/>New York</p>
