@@ -13,7 +13,7 @@ type Props = {
 const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, skills }: Props) => {
     return (
         <>
-            <div className='w-full min-h-[35vh] my-14 flex flex-col space-y-3'>
+            <div className='w-full h-[65vh] flex flex-col space-y-3'>
                 {/* COMPANY NAME & DATE */}
                 <div className='flex items-center justify-between'>
                     <Reveal><h1 className='text-3xl font-bold'>{company}</h1></Reveal>

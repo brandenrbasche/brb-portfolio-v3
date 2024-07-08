@@ -10,7 +10,7 @@ const Hero = () => {
                 <p>Full-Stack Engineer</p>
             </div>
             <div className='mb-16 text-5xl w-[85vw]'>
-                <p className='text-4xl font-bold mb-8'>Hi, I'm Branden.</p>
+                <p className='text-4xl font-bold mb-8'>Hi, I&#39;m Branden.</p>
                 <p className='text-3xl'>I bring full-stack development, end-to-end testing, and UX/UI expertise to
                     the table to craft beautiful, user-friendly, and accessible web experiences.</p>
             </div>

@@ -7,9 +7,10 @@ interface Props {
     children: JSX.Element;
     width?: 'fit-content' | '100%';
     revealColor?: string;
+    delay?: number;
 }
 
-const Reveal = ({ children, width = 'fit-content', revealColor = 'black' }: Props ) => {
+const Reveal = ({ children, width = 'fit-content', revealColor = 'black', delay = 1 }: Props ) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -25,26 +26,26 @@ const Reveal = ({ children, width = 'fit-content', revealColor = 'black' }: Prop
     }, [isInView]);
 
     return (
-        <div ref={ref} style={{ position: 'relative', width, height: "auto", overflow: 'hidden', paddingBottom: 5 }}>
+        <div ref={ref} style={{position: 'relative', width, height: "auto", overflow: 'hidden', paddingBottom: 5}}>
             <motion.div
                 variants={{
-                    hidden: { opacity: 1 },
-                    visible: { opacity: 1 }
+                    hidden: {opacity: 0},
+                    visible: {opacity: 1}
                 }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.5, delay: 0.25 }}
+                transition={{duration: 1, delay: .75}}
             >
                 {children}
             </motion.div>
             <motion.div
                 variants={{
-                    hidden: { left: 0 },
-                    visible: { left: "100%" }
+                    hidden: {left: 0},
+                    visible: {left: "100%"},
                 }}
                 initial="hidden"
                 animate={slideControls}
-                transition={{ duration: 0.75, ease: "easeOut", delay: 1 }}
+                transition={{duration: 0.75, ease: "easeOut", delay: delay}}
                 style={{
                     position: "absolute",
                     top: 4,

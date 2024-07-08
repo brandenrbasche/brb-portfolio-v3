@@ -13,9 +13,10 @@ const TrippyScroll = () => {
     // const scale = useTransform(scrollYProgress, [0, 1], ['0', '25'])
 
     return (
-        <div ref={targetRef} className="w-screen relative z-0 h-[400vh] bg-neutral-200">
+        <div ref={targetRef} className="w-screen relative z-0 h-screen bg-neutral-200">
             <div className="sticky top-0 h-screen bg-white">
-                <Trippy rotate={rotate}  />
+                {/*<Trippy rotate={rotate}  />*/}
+                <Trippy  />
                 {/*<Trippy scale={scale} />*/}
             </div>
         </div>
@@ -28,7 +29,7 @@ const PADDING = `${100 / NUM_SECTIONS / 2}vmin`;
 const generateSections = (
     count: number,
     color: string,
-    rotate: MotionValue
+    // rotate: MotionValue
 ) => {
     if (count === NUM_SECTIONS) {
         return <></>;
@@ -37,16 +38,20 @@ const generateSections = (
     const nextColor = color === "black" ? "white" : "black";
 
     return (
-        <Section rotate={rotate} background={color}>
-            {generateSections(count + 1, nextColor, rotate)}
+        // <Section rotate={rotate} background={color}>
+        <Section background={color}>
+            {/*{generateSections(count + 1, nextColor, rotate)}*/}
+            {generateSections(count + 1, nextColor)}
         </Section>
     );
 };
 
-const Trippy = ({ rotate }: { rotate: MotionValue }) => {
+// const Trippy = ({ rotate }: { rotate: MotionValue }) => {
+const Trippy = () => {
     return (
         <motion.div className="absolute inset-0 overflow-hidden bg-black">
-            {generateSections(0, "black", rotate)}
+            {/*{generateSections(0, "black", rotate)}*/}
+            {generateSections(0, "black")}
         </motion.div>
     );
 };
@@ -55,11 +60,11 @@ const Section = ({
                      background,
                      children,
                      // scale
-                     rotate,
+                     // rotate,
                  }: {
     background: string;
     // scale: MotionValue;
-    rotate: MotionValue;
+    // rotate: MotionValue;
     children?: JSX.Element;
 }) => {
     return (
@@ -68,7 +73,7 @@ const Section = ({
             style={{
                 background,
                 // scale,
-                rotate,
+                // rotate,
                 padding: PADDING,
             }}
         >

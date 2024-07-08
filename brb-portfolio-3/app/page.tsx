@@ -6,6 +6,7 @@ import Contact from "@/components/Contact";
 import Trippy from "@/components/ui/Trippy";
 import {ScreenFitText} from "@/components/ui/ScreenFitText";
 import React from "react";
+import Reveal from "@/components/ui/Reveal";
 
 export default function Home() {
   return (
@@ -13,19 +14,20 @@ export default function Home() {
           <Container>
               <Hero />
           </Container>
-          {/*<Trippy />*/}
+          <Trippy />
           <section className='bg-black text-white'>
               <Container>
                   <TechStack />
               </Container>
               <Container className='flex flex-col items-center'>
-                <Experience />
+                  <div className='background-red h-[20px] z-10 absolute top-1/2' />
+                  <Experience />
               </Container>
           </section>
           {/*<ScreenFitText text={'Reach out'} />*/}
-          <Container>
-              <Contact />
-          </Container>
+          {/*<Container>*/}
+          {/*    <Contact />*/}
+          {/*</Container>*/}
 
       </main>
   );
