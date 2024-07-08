@@ -12,17 +12,17 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location }: 
     return (
         <>
             <div className='w-full my-12 flex flex-col space-y-3'>
-                {/*company name, date*/}
+                {/* COMPANY NAME & DATE */}
                 <div className='flex items-center justify-between'>
                     <h1 className='text-3xl font-bold'>{company}</h1>
                     <h2 className='text-xl'>{dates}</h2>
                 </div>
-                {/*job title, city*/}
+                {/* JOB TITLE & LOCATION */}
                 <div className='flex items-center justify-between'>
                     <h2 className='font-bold text-xl text-white/50'>{jobTitle}</h2>
                     <h3 className='text-xl'>{location}</h3>
                 </div>
-                {/*job description*/}
+                {/* JOB DESCRIPTION */}
                 <div>
                     <p>{jobDescription}</p>
                 </div>
