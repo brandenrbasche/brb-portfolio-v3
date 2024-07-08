@@ -1,5 +1,4 @@
 import React from 'react';
-import Reveal from "@/components/ui/Reveal";
 
 const Hero = () => {
     return (

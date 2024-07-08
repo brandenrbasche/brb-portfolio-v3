@@ -1,7 +1,6 @@
 import React from 'react';
 import ExperienceCard from "@/components/ui/ExperienceCard";
 import { experienceData } from "@/data";
-import DoubleExperienceCard from "@/components/ui/DoubleExperienceCard";
 
 const Experience = () => {
     return (

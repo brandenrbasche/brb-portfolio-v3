@@ -9,14 +9,6 @@ type Props = {
 const Container = ({ children, className }: Props) => {
     return (
         <div className={twMerge('p-5', className)}>{children}</div>
-        // <div className='flex w-screen justify-between h-auto'>
-        //     {/*only apply center line on widths > 1000px */}
-        //     <div className='w-1/2 border-r-[1px] border-black' />
-        //     {/*right*/}
-        //     <div className='w-1/2'>
-        //         { children }
-        //     </div>
-        // </div>
     );
 };
 
