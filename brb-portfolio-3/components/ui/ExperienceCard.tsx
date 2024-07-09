@@ -28,7 +28,7 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
         <motion.div
             onClick={handleClick}
             layout='preserve-aspect'
-            className='w-screen relative flex items-center justify-center group transition ease-in cursor-pointer'
+            className='w-screen relative flex items-center justify-center group transition ease-in cursor-pointer py-6'
         >
             <Container className='flex items-center justify-center sm:w-full'>
                 <div className='w-[10vw] flex items-center justify-start'>
@@ -56,7 +56,8 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
                     <motion.div layout className='flex items-center justify-between'>
                         {/*bg-gradient-to-r from-red-500 to-orange-500*/}
                         <Reveal><h2
-                            className='text-xl bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent'>{jobTitle}</h2>
+                            // className='text-xl bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent'>{jobTitle}</h2>
+                            className='text-xl bg-gradient-to-r from-[#D1913C] to-[#FFD194] bg-clip-text text-transparent'>{jobTitle}</h2>
                         </Reveal>
                         <Reveal><h3 className='text-xl text-gray-300'>{location}</h3></Reveal>
                     </motion.div>
