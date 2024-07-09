@@ -29,11 +29,11 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
             onClick={handleClick}
             layout='preserve-aspect'
             transition={{
-                layout: {
-                    type: 'inertia'
-                }
+                // layout: {
+                //     type: 'inertia'
+                // }
             }}
-            className='w-screen relative flex items-center justify-center group hover:bg-white/10 transition ease-in cursor-pointer py-6'
+            className='w-screen relative flex items-center justify-center group transition ease-in cursor-pointer py-6'
         >
             <Container className='flex items-center justify-center sm:w-full'>
                 <div className='w-[10vw] flex items-center justify-start'>
@@ -42,8 +42,9 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
                             animate={controls}
                             variants={{
                                 initial: { rotate: '0deg' },
-                                expanded: { rotate: '90deg' }
+                                expanded: { rotate: '45deg' }
                             }}
+                            // layout='position'
                             className='text-white/15 group-hover:text-white/50 text-6xl font-extralight text-left m-0 p-0'
                         >
                             +
@@ -53,7 +54,7 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
                 <motion.div layout className='w-full space-y-3'>
                     {/* COMPANY NAME & DATE */}
                     <motion.div layout className='flex items-center justify-between'>
-                        <Reveal><h1 className='text-3xl font-bold'>{company}</h1></Reveal>
+                        <Reveal><h1 className='text-2xl font-bold'>{company}</h1></Reveal>
                         <Reveal><h2 className='text-xl'>{dates}</h2></Reveal>
                     </motion.div>
                     {/* JOB TITLE & LOCATION */}
@@ -73,7 +74,7 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
                             // transition={{duration: 0.75, ease: "easeOut"}}
                             layout='size'
                         >
-                            <p className=''>{jobDescription}</p>
+                            <p className='text-gray-300 font-extralight text-sm'>{jobDescription}</p>
                         </motion.div>
                     )}
                     {skills && (
@@ -82,10 +83,10 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
                                 <ul className='flex flex-wrap content-start justify-start text-nowrap'>
                                     {skills.map((skill, i) => (
                                         <li
-                                            className='bg-white/25 rounded-full px-3 py-1 my-2 mr-3'
+                                            className='bg-gradient-to-r from-white/15 to-white/20 rounded-full px-3 py-1 my-2 mr-3'
                                             key={i}
                                         >
-                                            <p>{skill}</p>
+                                            <p className='font-extralight text-sm text-gray-400'>{skill}</p>
                                         </li>
                                     ))}
                                 </ul>
