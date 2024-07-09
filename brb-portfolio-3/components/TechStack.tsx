@@ -6,14 +6,14 @@ const TechStack = () => {
     const backEndTools: string[] = ['Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'Java', 'Docker', 'AWS', 'Azure', 'Git'];
 
     return (
-        <section className='flex flex-col text-white pt-4 h-[50vh]'>
+        <section className='flex flex-col text-white pt-4'>
             <div>
                 {/*front end tools*/}
-                <p>TECH STACK</p>
+                {/*<p>TECH STACK</p>*/}
                 <div>
-                    <HorizontalText words={frontEndTools} />
+                    <HorizontalText words={frontEndTools}/>
                     {/*back end tools*/}
-                    <HorizontalText words={backEndTools} />
+                    <HorizontalText words={backEndTools}/>
                 </div>
             </div>
         </section>
