@@ -49,8 +49,8 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
                 <motion.div layout className='w-[90vw] space-y-3 pr-[10vw]'>
                     {/* COMPANY NAME & DATE */}
                     <motion.div layout className='flex items-center justify-between'>
-                        <Reveal><h1 className='text-2xl md:text-xl font-bold'>{company}</h1></Reveal>
-                        <Reveal><h2 className='lg:text-2xl md:text-xl'>{dates}</h2></Reveal>
+                        <Reveal><h1 className='text-2xl font-bold'>{company}</h1></Reveal>
+                        <Reveal><h2 className='text-xl'>{dates}</h2></Reveal>
                     </motion.div>
                     {/* JOB TITLE & LOCATION */}
                     <motion.div layout className='flex items-center justify-between'>
