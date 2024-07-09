@@ -28,12 +28,7 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
         <motion.div
             onClick={handleClick}
             layout='preserve-aspect'
-            transition={{
-                // layout: {
-                //     type: 'inertia'
-                // }
-            }}
-            className='w-screen relative flex items-center justify-center group transition ease-in cursor-pointer py-6'
+            className='w-screen relative flex items-center justify-center group transition ease-in cursor-pointer'
         >
             <Container className='flex items-center justify-center sm:w-full'>
                 <div className='w-[10vw] flex items-center justify-start'>
@@ -45,25 +40,25 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
                                 expanded: { rotate: '45deg' }
                             }}
                             // layout='position'
-                            className='text-white/15 group-hover:text-white/50 text-6xl font-extralight text-left m-0 p-0'
+                            className='text-white/15 group-hover:text-white/50 text-5xl font-extralight text-left m-0 p-0'
                         >
                             +
                         </motion.p>
                     </Reveal>
                 </div>
-                <motion.div layout className='w-full space-y-3'>
+                <motion.div layout className='w-[90vw] space-y-3 pr-[10vw]'>
                     {/* COMPANY NAME & DATE */}
                     <motion.div layout className='flex items-center justify-between'>
                         <Reveal><h1 className='text-2xl font-bold'>{company}</h1></Reveal>
-                        <Reveal><h2 className='text-xl'>{dates}</h2></Reveal>
+                        <Reveal><h2 className='text-2xl'>{dates}</h2></Reveal>
                     </motion.div>
                     {/* JOB TITLE & LOCATION */}
                     <motion.div layout className='flex items-center justify-between'>
                         {/*bg-gradient-to-r from-red-500 to-orange-500*/}
                         <Reveal><h2
-                            className='font-bold text-xl bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent'>{jobTitle}</h2>
+                            className='text-xl bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent'>{jobTitle}</h2>
                         </Reveal>
-                        <Reveal><h3 className='text-xl'>{location}</h3></Reveal>
+                        <Reveal><h3 className='text-xl text-gray-300'>{location}</h3></Reveal>
                     </motion.div>
                     {/* JOB DESCRIPTION */}
                     {isOpen && (
@@ -71,10 +66,9 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
                             initial={{opacity: 0, height: 0}}
                             animate={{opacity: 1, height: 'auto'}}
                             exit={{opacity: 0, height: 0}}
-                            // transition={{duration: 0.75, ease: "easeOut"}}
                             layout='size'
                         >
-                            <p className='text-gray-300 font-extralight text-sm'>{jobDescription}</p>
+                            <p className='text-gray-300 font-extralight text-sm leading-6'>{jobDescription}</p>
                         </motion.div>
                     )}
                     {skills && (
