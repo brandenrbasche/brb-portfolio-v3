@@ -1,4 +1,5 @@
 import Container from "@/components/ui/Container";
+import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
 import TechStack from "@/components/TechStack";
@@ -16,15 +17,15 @@ export default function Home() {
               <Container>
                   <TechStack />
               </Container>
-              <Container className='flex flex-col items-center'>
-                  <div className='background-red h-[20px] z-10 absolute top-1/2' />
-                  <Experience />
-              </Container>
+              <Container><p>EXPERIENCE</p></Container>
+              {/*<Container className='flex flex-col items-center'>*/}
+              <Experience />
+              {/*</Container>*/}
           </section>
           {/*<ScreenFitText text={'Reach out'} />*/}
-          {/*<Container>*/}
-          {/*    <Contact />*/}
-          {/*</Container>*/}
+          <Container>
+              <Contact />
+          </Container>
 
       </main>
   );

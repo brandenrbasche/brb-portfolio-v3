@@ -1,5 +1,9 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Reveal from './Reveal';
+import Container from './Container';
+import {motion, useAnimation} from 'framer-motion';
 
 type Props = {
     company: string;
@@ -11,42 +15,86 @@ type Props = {
 }
 
 const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, skills }: Props) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const controls = useAnimation();
+
+    const handleClick = () => {
+        console.log('clicked!');
+        setIsOpen(!isOpen);
+        !isOpen ? controls.start('expanded') : controls.start('initial');
+    }
+
     return (
-        <div>
-            <div className='w-full md:min-h-[65vh] sm:min-h-screen  flex flex-col space-y-3'>
-                {/* COMPANY NAME & DATE */}
-                <div className='flex items-center justify-between'>
-                    <Reveal><h1 className='text-3xl font-bold'>{company}</h1></Reveal>
-                    <Reveal><h2 className='text-xl'>{dates}</h2></Reveal>
-                </div>
-                {/* JOB TITLE & LOCATION */}
-                <div className='flex items-center justify-between'>
-                    <Reveal><h2 className='font-bold text-xl text-white/50'>{jobTitle}</h2></Reveal>
-                    <Reveal><h3 className='text-xl'>{location}</h3></Reveal>
-                </div>
-                {/* JOB DESCRIPTION */}
-                <div>
-                    <Reveal><p>{jobDescription}</p></Reveal>
-                </div>
-                {/* TODO: skills tags */}
-                {skills && (
+        <motion.div
+            onClick={handleClick}
+            layout='preserve-aspect'
+            transition={{
+                layout: {
+                    type: 'inertia'
+                }
+            }}
+            className='w-screen relative flex items-center justify-center group hover:bg-white/10 transition ease-in cursor-pointer py-6'
+        >
+            <Container className='flex items-center justify-center sm:w-full'>
+                <div className='w-[10vw] flex items-center justify-start'>
                     <Reveal>
-                        <div className='my-4'>
-                            <ul className='flex flex-wrap content-start justify-start text-nowrap'>
-                                {skills.map((skill, i) => (
-                                    <li
-                                        className='bg-white/25 rounded-full px-3 py-1 my-2 mr-3'
-                                        key={i}
-                                    >
-                                        <p>{skill}</p>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                        <motion.p
+                            animate={controls}
+                            variants={{
+                                initial: { rotate: '0deg' },
+                                expanded: { rotate: '90deg' }
+                            }}
+                            className='text-white/15 group-hover:text-white/50 text-6xl font-extralight text-left m-0 p-0'
+                        >
+                            +
+                        </motion.p>
                     </Reveal>
-                )}
-            </div>
-        </div>
+                </div>
+                <motion.div layout className='w-full space-y-3'>
+                    {/* COMPANY NAME & DATE */}
+                    <motion.div layout className='flex items-center justify-between'>
+                        <Reveal><h1 className='text-3xl font-bold'>{company}</h1></Reveal>
+                        <Reveal><h2 className='text-xl'>{dates}</h2></Reveal>
+                    </motion.div>
+                    {/* JOB TITLE & LOCATION */}
+                    <motion.div layout className='flex items-center justify-between'>
+                        {/*bg-gradient-to-r from-red-500 to-orange-500*/}
+                        <Reveal><h2
+                            className='font-bold text-xl bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent'>{jobTitle}</h2>
+                        </Reveal>
+                        <Reveal><h3 className='text-xl'>{location}</h3></Reveal>
+                    </motion.div>
+                    {/* JOB DESCRIPTION */}
+                    {isOpen && (
+                        <motion.div
+                            initial={{opacity: 0, height: 0}}
+                            animate={{opacity: 1, height: 'auto'}}
+                            exit={{opacity: 0, height: 0}}
+                            // transition={{duration: 0.75, ease: "easeOut"}}
+                            layout='size'
+                        >
+                            <p className=''>{jobDescription}</p>
+                        </motion.div>
+                    )}
+                    {skills && (
+                        <Reveal>
+                            <motion.div layout='position' className='my-4'>
+                                <ul className='flex flex-wrap content-start justify-start text-nowrap'>
+                                    {skills.map((skill, i) => (
+                                        <li
+                                            className='bg-white/25 rounded-full px-3 py-1 my-2 mr-3'
+                                            key={i}
+                                        >
+                                            <p>{skill}</p>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </motion.div>
+                        </Reveal>
+                    )}
+                </motion.div>
+            </Container>
+        </motion.div>
     );
 };
 

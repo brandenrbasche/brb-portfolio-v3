@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ibmPlexMono } from "@/data/fonts";
+import { ibmPlexMono, jetBrainsMono } from "@/data/fonts";
 import "./globals.css";
 
 
@@ -15,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={ibmPlexMono.className}>{children}</body>
+    <head>
+      <meta name='viewport' content="width=device-width, initial-scale=1.0" />
+    </head>
+      <body className={jetBrainsMono.className}>{children}</body>
     </html>
   );
 }
