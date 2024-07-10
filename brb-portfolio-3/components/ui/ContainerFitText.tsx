@@ -1,18 +1,19 @@
 'use client';
 
-import React, { useEffect, useRef } from "react";
-import { dmSans } from "@/data/fonts";
+import React, {useEffect, useRef} from 'react';
 import {twMerge} from "tailwind-merge";
+import {dmSans} from "@/data/fonts";
 
 type Props = {
     text: string;
 }
 
-export const ScreenFitText = ({ text }: Props) => {
+const ContainerFitText = ({ text }: Props) => {
     const containerRef = useRef<HTMLDivElement | null>(null);
     const textRef = useRef<HTMLSpanElement | null>(null);
 
     useEffect(() => {
+        console.log('useeffect hit');
         resizeText();
 
         window.addEventListener("resize", resizeText);
@@ -20,7 +21,7 @@ export const ScreenFitText = ({ text }: Props) => {
         return () => {
             window.removeEventListener("resize", resizeText);
         };
-    }, []);
+    }, [containerRef.current?.offsetWidth]);
 
     const resizeText = () => {
         const container = containerRef.current;
@@ -31,7 +32,6 @@ export const ScreenFitText = ({ text }: Props) => {
         }
 
         const containerWidth = container.offsetWidth;
-        console.log('container width: ', containerWidth);
         let min = 1;
         let max = 2500;
 
@@ -51,11 +51,11 @@ export const ScreenFitText = ({ text }: Props) => {
 
     return (
         <div
-            className="align-top flex flex-col w-screen items-center justify-start overflow-hidden p-0 m-0"
+            className="flex items-end"
             ref={containerRef}
         >
       <span
-          className={twMerge(dmSans.className, "leading-none tracking-tightest align-top bottom-0 left-0 mx-auto whitespace-nowrap font-black uppercase")}
+          className={twMerge(dmSans.className, "text-justify text-8xl leading-none tracking-tightest font-black uppercase")}
           ref={textRef}
       >
         {text}
@@ -63,3 +63,5 @@ export const ScreenFitText = ({ text }: Props) => {
         </div>
     );
 };
+
+export default ContainerFitText;
