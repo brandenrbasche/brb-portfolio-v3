@@ -16,8 +16,8 @@ const Contact = () => {
                 </div>
                 {/*RIGHT*/}
                 <div className='w-[1/2] h-full flex flex-col gap-y-6'>
-                    <p className='text-md text-right
-                    '>Have any questions? Reach out!<br /><span className='italic'>(I reply fast)</span></p>
+                    <p className='text-sm font-light text-right
+                    '>Have any questions? Reach out!<br /><span className='italic text-white/50'>(I reply fast)</span></p>
                     <div className='flex space-x-3 justify-end'>
                         <ContactCard website='LinkedIn' link='https://www.linkedin.com/in/brandenbasche/' icon={<LinkedInIcon />} />
                         <ContactCard website='GitHub' link='https://github.com/brandenrbasche' icon={<GitHubIcon />} />

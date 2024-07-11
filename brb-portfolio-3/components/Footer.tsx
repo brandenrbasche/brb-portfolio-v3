@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
 
 const Footer = () => {
     // const topRef = useRef<HTMLDivElement>(null);
@@ -11,10 +11,10 @@ const Footer = () => {
     return (
         <div className='flex items-center justify-between text-sm'>
             <div>
-                <p>Built by me, BRB. <span className='italic text-gray-500'>(Branden Robert Basche)</span></p>
+                <p>Built by me, BRB. <span className='text-white/50'>(Branden Robert Basche)</span></p>
             </div>
             <div>
-                <button onClick={scrollToTop}><ArrowUp /></button>
+                <button className='text-white/50 hover:text-white transition ease-in-out' onClick={scrollToTop}><ArrowUp /></button>
             </div>
         </div>
     );
