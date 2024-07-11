@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 import {twMerge} from "tailwind-merge";
-import TechStack from "@/components/TechStack";
-import Container from "@/components/ui/Container";
+import HeroText from "@/components/ui/HeroText";
 
 const Hero = () => {
     return (
@@ -12,10 +11,9 @@ const Hero = () => {
                 <p>Brooklyn,<br/>New York</p>
                 <p>Full-Stack Engineer</p>
             </div>
+            <HeroText />
             <div className='text-5xl w-[85vw]'>
-                {/*<h1 className='text-9xl font-black'>BRB.<br/>CODES</h1>*/}
-                <h1 className='font-black mb-2'>Hi, I'm Branden</h1>
-                <p className={twMerge('text-3xl font-light')}>I bring full-stack development, end-to-end testing, and
+                <p className={twMerge('text-xl font-light')}>I bring full-stack development, end-to-end testing, and
                     UX/UI
                     expertise to
                     the table to craft beautiful, user-friendly, and accessible web experiences.</p>
@@ -23,5 +21,6 @@ const Hero = () => {
         </section>
     );
 };
+
 
 export default Hero;
