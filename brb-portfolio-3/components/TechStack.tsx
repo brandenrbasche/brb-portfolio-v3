@@ -6,7 +6,7 @@ const TechStack = () => {
     const backEndTools: string[] = ['Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'Java', 'Docker', 'AWS', 'Azure', 'Git'];
 
     return (
-        <section className='text-white pt-4 h-[25vh] flex items-center overflow-x-hidden'>
+        <section className='bg-black w-screen text-white pt-4 h-[30vh] overflow-x-hidden'>
             {/*<p>TECH STACK</p>*/}
             <div>
                 {/*front end tools*/}

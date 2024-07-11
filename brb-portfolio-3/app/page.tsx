@@ -12,21 +12,19 @@ export default function Home() {
           <Container>
               <Hero />
           </Container>
-          <Trippy />
+          <TechStack />
+          {/*<Trippy />*/}
           <section className='bg-black text-white'>
-              <Container>
-                  <TechStack />
-              </Container>
-              <Container><p>EXPERIENCE</p></Container>
-              {/*<Container className='flex flex-col items-center'>*/}
-              <Experience />
+              {/*<Container>*/}
+              {/*    <TechStack />*/}
               {/*</Container>*/}
+              <Container><p>EXPERIENCE</p></Container>
+              <Experience />
+              <Trippy />
+              <Container>
+                  <Contact />
+              </Container>
           </section>
-          {/*<ScreenFitText text={'Reach out'} />*/}
-          <Container>
-              <Contact />
-          </Container>
-
       </main>
   );
 }
