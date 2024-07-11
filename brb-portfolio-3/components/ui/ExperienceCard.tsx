@@ -8,7 +8,7 @@ import {motion, useAnimation} from 'framer-motion';
 type Props = {
     company: string;
     jobTitle: string;
-    jobDescription: string;
+    jobDescription?: string;
     dates: string;
     location: string;
     skills?: string[];
@@ -28,7 +28,7 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
     return (
         <motion.div
             onClick={handleClick}
-            className='w-screen min-h-[50vh] relative flex items-center justify-center group transition ease-in cursor-pointer py-6'
+            className='w-screen min-h-[75vh] relative flex items-center justify-center group transition ease-in cursor-pointer py-6'
         >
             <Container className='flex items-start justify-center sm:w-full'>
                 <motion.div layout='position' className='w-[10vw] flex items-center justify-center'>
