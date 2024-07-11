@@ -24,7 +24,7 @@ const HeroText = () => {
                 ease: 'easeOut',
                 stiffness: 100
             }}
-            className='flex flex-col justify-center leading-none'
+            className='flex flex-col justify-center leading-none animate-pulse'
         >
             <motion.h1 variants={item} className='text-lg text-black/5 font-thin'>BRB.CODES</motion.h1>
             <motion.h1 variants={item} className='text-xl text-black/10 font-extralight'>BRB.CODES</motion.h1>

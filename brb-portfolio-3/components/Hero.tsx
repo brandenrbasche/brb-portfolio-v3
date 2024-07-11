@@ -12,8 +12,8 @@ const Hero = () => {
                 <p>Full-Stack Engineer</p>
             </div>
             <HeroText />
-            <div className='text-5xl w-[85vw]'>
-                <p className={twMerge('text-xl font-light')}>I bring full-stack development, end-to-end testing, and
+            <div className='w-[85vw]'>
+                <p className={twMerge('font-light')}>I bring full-stack development, end-to-end testing, and
                     UX/UI
                     expertise to
                     the table to craft beautiful, user-friendly, and accessible web experiences.</p>
