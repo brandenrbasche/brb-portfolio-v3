@@ -15,6 +15,7 @@ const Experience = () => {
                     jobDescription={item.jobDescription}
                     location={item.location}
                     skills={item.skills}
+                    bullets={item.bullets}
                 />
             ))}
         </section>

@@ -11,10 +11,11 @@ type Props = {
     jobDescription: string;
     dates: string;
     location: string;
-    skills?: string[]
+    skills?: string[];
+    bullets?: string[];
 }
 
-const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, skills }: Props) => {
+const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, skills, bullets }: Props) => {
     const [isOpen, setIsOpen] = useState(false);
     const controls = useAnimation();
 
@@ -27,11 +28,10 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
     return (
         <motion.div
             onClick={handleClick}
-            layout='preserve-aspect'
             className='w-screen relative flex items-center justify-center group transition ease-in cursor-pointer py-6'
         >
             <Container className='flex items-center justify-center sm:w-full'>
-                <div className='w-[10vw] flex items-center justify-start'>
+                <motion.div layout='position' className='w-[10vw] flex items-center justify-start'>
                     <Reveal>
                         <motion.p
                             animate={controls}
@@ -45,7 +45,7 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
                             +
                         </motion.p>
                     </Reveal>
-                </div>
+                </motion.div>
                 <motion.div layout className='w-[90vw] space-y-3 pr-[10vw]'>
                     {/* COMPANY NAME & DATE */}
                     <motion.div layout className='flex items-center justify-between'>
@@ -60,14 +60,24 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
                         <Reveal><h3 className='text-xl text-gray-300'>{location}</h3></Reveal>
                     </motion.div>
                     {/* JOB DESCRIPTION */}
-                    {isOpen && (
+                    {isOpen && bullets && (
                         <motion.div
                             initial={{opacity: 0, height: 0}}
                             animate={{opacity: 1, height: 'auto'}}
                             exit={{opacity: 0, height: 0}}
                             layout='size'
                         >
-                            <p className='text-gray-300 font-extralight text-sm leading-6'>{jobDescription}</p>
+                            <ul className='list-disc'>
+                                {bullets.map((bullet, index) => (
+                                    <li
+                                        className='text-gray-300 font-extralight text-sm leading-5 mb-3'
+                                        key={index}
+                                    >
+                                        {bullet}
+                                </li>
+                                ))}
+                            </ul>
+                            {/*<p className='text-gray-300 font-extralight text-sm leading-6'>{jobDescription}</p>*/}
                         </motion.div>
                     )}
                     {skills && (

@@ -7,15 +7,10 @@ import * as squeakyBallAnimation from '@/data/animations/squeakyBallAnimation.js
 const SqueakyBallAnimation = () => {
 
     return (
-        <div className='flex items-end justify-center'>
             <Lottie
-                style={{
-                    width: '50%',
-                    height: '50%'
-                }}
+                style={{ height: '10%', width: '10%' }}
                 animationData={squeakyBallAnimation} loop={true}
             />
-        </div>
     );
 };
 
