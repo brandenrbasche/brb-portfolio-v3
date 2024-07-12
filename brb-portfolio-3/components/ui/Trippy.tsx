@@ -1,6 +1,6 @@
 'use client';
 
-import { useTransform, MotionValue, useScroll, motion } from "framer-motion";
+import {useTransform, useScroll, motion } from "framer-motion";
 import { useRef } from "react";
 
 const TrippyScroll = () => {
@@ -9,7 +9,7 @@ const TrippyScroll = () => {
         target: targetRef,
     });
 
-    const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "90deg"]);
+    // const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "90deg"]);
     // const scale = useTransform(scrollYProgress, [0, 1], ['0', '25'])
 
     return (
@@ -35,7 +35,8 @@ const generateSections = (
         return <></>;
     }
 
-    const nextColor = color === "black" ? "white" : "black";
+    // const nextColor = color === "black" ? "white" : "black";
+    const nextColor = color === "#f4f1ea" ? "#001ecb" : "#f4f1ea";
 
     return (
         // <Section rotate={rotate} background={color}>
@@ -49,9 +50,9 @@ const generateSections = (
 // const Trippy = ({ rotate }: { rotate: MotionValue }) => {
 const Trippy = () => {
     return (
-        <motion.div className="absolute inset-0 overflow-hidden bg-black">
+        <motion.div className="absolute inset-0 overflow-hidden">
             {/*{generateSections(0, "black", rotate)}*/}
-            {generateSections(0, "black")}
+            {generateSections(0, '#f4f1ea')}
         </motion.div>
     );
 };

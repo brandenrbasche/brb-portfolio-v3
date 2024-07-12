@@ -2,31 +2,20 @@ import Container from "@/components/ui/Container";
 import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
-import TechStack from "@/components/TechStack";
 import Trippy from "@/components/ui/Trippy";
 import React from "react";
 
 export default function Home() {
   return (
-      <main>
+      <main className='bg-[#f4f1ea] text-[#001ecb]'>
           <Container>
               <Hero />
+            <Experience />
           </Container>
           <Trippy />
-          <section className='bg-black text-white'>
-              <Container>
-                  <TechStack />
-              </Container>
-              <Container><p>EXPERIENCE</p></Container>
-              {/*<Container className='flex flex-col items-center'>*/}
-              <Experience />
-              {/*</Container>*/}
-          </section>
-          {/*<ScreenFitText text={'Reach out'} />*/}
           <Container>
               <Contact />
           </Container>
-
       </main>
   );
 }

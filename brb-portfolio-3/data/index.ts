@@ -42,28 +42,28 @@ export const experienceData = [
         jobDescription: "Developed SvelteScope, a debugging application that enables non-destructive component manipulation and state management within Chrome DevTools. Built an interactive tree diagram with Vis.js and managed state history through tabbed snapshots using Svelte's built-in stores.",
         skills: ["Svelte", "Node.js", "Express.js", "AWS", "Vis.js"]
     },
-    // {
-    //     company: "Insight",
-    //     jobTitle: "Web Optimization Intern",
-    //     dates: "September 19 - January 2020",
-    //     location: "Phoenix, AZ",
-    //     jobDescription: "Collaborated closely with developers to optimize digital experiences. Utilized Adobe Target for A/B testing and Google Analytics for user behavior insights. Conducted site-wide SEO audits using the Sitebulb crawler, measuring page speed, search traffic, accessibility, and code coverage. Leveraged Power BI to create data visualizations (dashboards) that tracked customer journeys, allowing the team to make data-driven decisions for optimization.",
-    //     skills: ["SEO", "Adobe Target", "Google Analytics", "PowerBI"]
-    // },
-    // {
-    //     company: "Uber",
-    //     jobTitle: "Web Analyst",
-    //     dates: "January 2019 - August 2019",
-    //     location: "Phoenix, AZ",
-    //     jobDescription: "Wrote PostgreSQL queries to pull data and create dashboards in Google Data Studio to present key fraud indicators. Built custom sorting algorithms in Google Apps Script to automate data transfer between Google Sheets. Additionally, managed a custom internal application for SPOT's time-tracking efforts.",
-    //     skills: ["PostgreSQL", "Google Apps Script", "HTML", "CSS", "Bootstrap", "JavaScript (ES6)", "Google Sheets"]
-    // },
-    // {
-    //     company: "Virtual Reality Ireland",
-    //     jobTitle: "UI Design Intern",
-    //     dates: "2019",
-    //     location: "Dublin, Ireland",
-    //     jobDescription: "Designed the website for Virtual Reality Ireland from scratch using Webflow and various JavaScript libraries. Implemented comprehensive user testing to ensure smooth user experience. Implemented ongoing updates/optimizations to continually aligned with the company's evolving needs.",
-    //     skills: ["Webflow", "JavaScript (ES6)", "Figma"]
-    // },
+    {
+        company: "Insight",
+        jobTitle: "Web Optimization Intern",
+        dates: "September 19 - January 2020",
+        location: "Phoenix, AZ",
+        jobDescription: "Collaborated closely with developers to optimize digital experiences. Utilized Adobe Target for A/B testing and Google Analytics for user behavior insights. Conducted site-wide SEO audits using the Sitebulb crawler, measuring page speed, search traffic, accessibility, and code coverage. Leveraged Power BI to create data visualizations (dashboards) that tracked customer journeys, allowing the team to make data-driven decisions for optimization.",
+        skills: ["SEO", "Adobe Target", "Google Analytics", "PowerBI"]
+    },
+    {
+        company: "Uber",
+        jobTitle: "Web Analyst",
+        dates: "January 2019 - August 2019",
+        location: "Phoenix, AZ",
+        jobDescription: "Wrote PostgreSQL queries to pull data and create dashboards in Google Data Studio to present key fraud indicators. Built custom sorting algorithms in Google Apps Script to automate data transfer between Google Sheets. Additionally, managed a custom internal application for SPOT's time-tracking efforts.",
+        skills: ["PostgreSQL", "Google Apps Script", "HTML", "CSS", "Bootstrap", "JavaScript (ES6)", "Google Sheets"]
+    },
+    {
+        company: "Virtual Reality Ireland",
+        jobTitle: "UI Design Intern",
+        dates: "2019",
+        location: "Dublin, Ireland",
+        jobDescription: "Designed the website for Virtual Reality Ireland from scratch using Webflow and various JavaScript libraries. Implemented comprehensive user testing to ensure smooth user experience. Implemented ongoing updates/optimizations to continually aligned with the company's evolving needs.",
+        skills: ["Webflow", "JavaScript (ES6)", "Figma"]
+    },
 ];

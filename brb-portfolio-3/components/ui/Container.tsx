@@ -8,7 +8,7 @@ type Props = {
 
 const Container = ({ children, className }: Props) => {
     return (
-        <div className={twMerge('p-5', className)}>{children}</div>
+        <div className={twMerge('p-5 flex flex-col justify-center items-center', className)}>{children}</div>
     );
 };
 
