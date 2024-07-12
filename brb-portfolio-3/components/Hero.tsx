@@ -8,8 +8,8 @@ import Reveal from "@/components/ui/Reveal";
 
 const Hero = () => {
     return (
-        <section className='flex flex-col justify-start'>
-            <div className='flex justify-between'>
+        <section className='flex flex-col w-full'>
+            <div className='flex justify-between items-start'>
                 <Link href={'https://www.linkedin.com/in/brandenbasche/'}><h3 className='uppercase'>BRB.<br/>CODES</h3></Link>
                 <p>Brooklyn,<br/>New York</p>
                 <p>Full-Stack Engineer</p>

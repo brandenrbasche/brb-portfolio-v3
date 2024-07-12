@@ -4,11 +4,12 @@ import { experienceData } from "@/data";
 
 const Experience = () => {
     return (
-        <section className='w-full text-white'>
-            {/*<DoubleExperienceCard  />*/}
+        <section className='w-[75vw] text-[#001ecb]'>
+            <p>experience</p>
             {experienceData.map((item, i) => (
                 <ExperienceCard
                     key={i}
+                    number={i}
                     company={item.company}
                     jobTitle={item.jobTitle}
                     dates={item.dates}
