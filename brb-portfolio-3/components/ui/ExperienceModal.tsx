@@ -20,15 +20,18 @@ const ExperienceModal = ({ isOpen, handleClick, company, jobTitle, jobDescriptio
     if (!isOpen) return <></>;
     return (
         <motion.div
-            layoutId={`bg-modal-${number}`}
+            layout
+            // layoutId={`bg-modal-${number}`}
             transition={{
                 duration: .4,
                 ease: 'easeIn'
             }}
             onClick={() => handleClick()}
-            className='fixed inset-0 bg-[#001ecb] z-50 cursor-pointer overflow-hidden text-white flex items-center justify-center'
+            className='fixed inset-0 bg-[#001ecb] z-50 cursor-pointer overflow-hidden text-white flex items-center justify-between'
         >
-            <div className='w-full max-w-screen-md mx-auto my-8 px-8'>
+            <motion.div
+                layoutId={`bg-modal-${number}`}
+                className='w-full max-w-screen-md mx-auto my-8 px-8'>
                 <div className='flex justify-between mb-3'>
                     <div>
                         <motion.h2
@@ -50,6 +53,7 @@ const ExperienceModal = ({ isOpen, handleClick, company, jobTitle, jobDescriptio
                     <h2>X</h2>
                 </div>
                 <motion.h2
+                    layout
                     layoutId={`job-title-${number}`}
                     className='font-extralight text-4xl inline-block text-left tracking-tighter mb-2'
                 >
@@ -57,29 +61,39 @@ const ExperienceModal = ({ isOpen, handleClick, company, jobTitle, jobDescriptio
                 </motion.h2>
                 <hr className='mb-6' />
                 {bullets && (
-                    <div>
-                        <ul className='list-disc font-thin'>
-                            {bullets.map((bullet, i) => (
-                                <li className='leading-5 mb-2' key={i}>{bullet}</li>
-                            ))}
-                        </ul>
-                    </div>
+                <motion.div
+                    transition={{
+                        delay: 0.4
+                    }}
+                >
+                    <ul className='list-disc font-thin text-white'>
+                        {bullets?.map((bullet, i) => (
+                            <li className='leading-5 mb-3 text-sm' key={i}>{bullet}</li>
+                        ))}
+                    </ul>
+                </motion.div>
                 )}
                 {skills && (
-                    <div>
-                        <ul className='flex flex-wrap content-start text-nowrap text-white'>
+                    <motion.div
+                        className='block'
+                        layout
+                        layoutId={`skills-${number}`}
+                    >
+                        <motion.ul
+                            layout
+                            className='flex flex-wrap content-start text-nowrap text-white'>
                             {skills.map((skill, i) => (
-                                <li
+                                <motion.li
                                     className='border-2 border-white rounded-full px-3 py-1 mr-3 mb-2'
                                     key={i}
                                 >
                                     <p className='font-extralight text-sm italic'>{skill}</p>
-                                </li>
+                                </motion.li>
                             ))}
-                        </ul>
-                    </div>
+                        </motion.ul>
+                    </motion.div>
                 )}
-            </div>
+            </motion.div>
         </motion.div>
     );
 };

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { spaceGrotesk } from "@/data/fonts";
-import {motion, useAnimation} from 'framer-motion';
+import {motion} from 'framer-motion';
 import {twMerge} from "tailwind-merge";
 import ExperienceModal from "@/components/ui/ExperienceModal";
 
@@ -58,23 +58,36 @@ const ExperienceCard = ({ company, jobTitle, jobDescription, dates, location, sk
                 </div>
                 <div className='block'>
                     {skills && (
-                        <div>
-                            <ul
+                        <motion.div
+                            layoutId={`skills-${number}`}
+                        >
+                            <motion.ul
+                                layout
                                 className='flex flex-wrap content-start text-nowrap'>
                             {skills.map((skill, i) => (
-                                    <li
+                                    <motion.li
                                         className='border-2 border-[#001ecb] group-hover:border-white rounded-full px-3 py-1 mr-3 mb-2'
                                         key={i}
                                     >
                                         <p className='font-extralight text-sm italic'>{skill}</p>
-                                    </li>
+                                    </motion.li>
                                 ))}
-                            </ul>
-                        </div>
+                            </motion.ul>
+                        </motion.div>
                     )}
                 </div>
             </motion.button>
-            <ExperienceModal company={company} jobTitle={jobTitle} jobDescription={jobDescription} dates={dates} location={location} number={number} isOpen={isOpen} handleClick={handleClick} bullets={bullets} />
+            <ExperienceModal
+                company={company}
+                jobTitle={jobTitle}
+                jobDescription={jobDescription}
+                dates={dates} location={location}
+                number={number}
+                isOpen={isOpen}
+                handleClick={handleClick}
+                bullets={bullets}
+                skills={skills}
+            />
         </>
     )
 }
