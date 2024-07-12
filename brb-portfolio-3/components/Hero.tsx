@@ -16,7 +16,7 @@ const Hero = () => {
             <ContainerScroll titleComponent={<HeroText/>}>
                 <div className='h-full flex flex-col justify-between'>
                     <Reveal revealColor='#f3f4f6'>
-                        <p className='font-light text-xl'>I bring full-stack development, end-to-end testing, and
+                        <p className='font-light text-3xl'>I bring full-stack development, end-to-end testing, and
                             UX/UI expertise to the table to craft beautiful, user-friendly, and accessible web
                             experiences.</p>
                     </Reveal>

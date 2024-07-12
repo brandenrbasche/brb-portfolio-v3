@@ -1,11 +1,12 @@
 import React from 'react';
 import ExperienceCard from "@/components/ui/ExperienceCard";
 import { experienceData } from "@/data";
+import Reveal from "@/components/ui/Reveal";
 
 const Experience = () => {
     return (
-        <section className='w-[75vw] text-[#001ecb]'>
-            <p>experience</p>
+        <section className='w-[75vw] text-[#001ecb] mb-36'>
+            <Reveal revealColor='#001ecb'><p>Experience</p></Reveal>
             {experienceData.map((item, i) => (
                 <ExperienceCard
                     key={i}
