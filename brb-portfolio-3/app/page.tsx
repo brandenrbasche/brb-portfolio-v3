@@ -9,15 +9,10 @@ import React from "react";
 export default function Home() {
   return (
       <main>
-          <Container>
+          <Container className='bg-[#f4f1ea]'>
               <Hero />
           </Container>
-          <TechStack />
-          {/*<Trippy />*/}
           <section className='bg-black text-white'>
-              {/*<Container>*/}
-              {/*    <TechStack />*/}
-              {/*</Container>*/}
               <Container><p>EXPERIENCE</p></Container>
               <Experience />
               <Trippy />
