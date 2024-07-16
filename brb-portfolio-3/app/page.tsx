@@ -4,13 +4,19 @@ import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
 import Trippy from "@/components/ui/Trippy";
 import React from "react";
+import NewHero from "@/components/NewHero";
+import Work from "@/components/Work";
+import { spaceGrotesk } from "@/data/fonts";
+import {twMerge} from "tailwind-merge";
 
 export default function Home() {
+
   return (
-      <main className='bg-[#f4f1ea] text-[#001ecb]'>
+      <main className={twMerge('bg-[#f4f1ea]', spaceGrotesk.className)}>
           <Container>
-              <Hero />
-            <Experience />
+              <NewHero />
+              <Work />
+            {/*<Experience />*/}
           </Container>
           <Trippy />
           <Container>

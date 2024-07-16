@@ -5,7 +5,7 @@ import Reveal from "@/components/ui/Reveal";
 
 const Experience = () => {
     return (
-        <section className='w-[75vw] text-[#001ecb] mb-36'>
+        <section className='w-[75vw] mb-36'>
             <Reveal revealColor='#001ecb'><p>Experience</p></Reveal>
             {experienceData.map((item, i) => (
                 <ExperienceCard

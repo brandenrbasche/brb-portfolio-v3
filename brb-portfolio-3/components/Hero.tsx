@@ -9,8 +9,8 @@ const Hero = () => {
     return (
         <section className='flex flex-col w-full'>
             <div className='flex justify-between items-start'>
-                <Link href={'https://www.linkedin.com/in/brandenbasche/'}><h3 className='uppercase'>BRB.<br/>CODES</h3></Link>
-                <p>Brooklyn,<br/>New York</p>
+                <Link href={'https://www.linkedin.com/in/brandenbasche/'}><h3 className='uppercase'>BRB.CODES</h3></Link>
+                <p>New York City</p>
                 <p>Full-Stack Engineer</p>
             </div>
             <ContainerScroll titleComponent={<HeroText/>}>
